@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import '~material-icons/iconfont/material-icons.css';
+:root {
+  --primary-color: #007aff;
+  //--dark-color: #333333;
+  --light-color: #f4f4f4;
+  --grey-color: rgba(120, 120, 120, 0.21)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}

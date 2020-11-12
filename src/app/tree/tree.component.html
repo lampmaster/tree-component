@@ -1,0 +1,37 @@
+<div class="container">
+  <ng-container *ngFor="let node of parsedTreeData">
+    <ng-template
+      [ngTemplateOutlet]="nodeItem"
+      [ngTemplateOutletContext]="{ node: node }"
+    ></ng-template>
+  </ng-container>
+</div>
+
+<ng-template #nodeItem let-node="node">
+  <div [ngClass]="node.isRoot ? 'item' : 'item__inner'">
+
+    <div class="item__entity" (click)="expand(node)" >
+      <div class="item__left">
+        <span class="material-icons item__icon">{{setType(node)}}</span>
+        <div class="item__title">{{node.name}}</div>
+      </div>
+
+      <div class="item__right">
+        <div
+          *ngIf="node.type === 'folder'"
+          class="item__data"
+        >{{node.children.length}} elements</div>
+      </div>
+    </div>
+
+    <div class="item__child-elements" [class.close]="!node.isOpen">
+      <ng-template ngFor let-child [ngForOf]="node.children">
+        <ng-template
+          [ngTemplateOutlet]="nodeItem"
+          [ngTemplateOutletContext]="{ node: child }"
+        ></ng-template>
+      </ng-template>
+    </div>
+
+  </div>
+</ng-template>

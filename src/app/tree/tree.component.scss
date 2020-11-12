@@ -1,0 +1,67 @@
+.container {
+  overflow: hidden;
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
+
+  .item:not(:last-child) {
+    border-bottom: 1px solid var(--grey-color);
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__entity {
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0, 122, 255, 0.06);
+    }
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__title {
+    margin-left: 5px;
+    color: #333333;
+  }
+
+  &__icon {
+    transition: all 1.5s ease-in;
+    color: var(--primary-color);
+  }
+
+  &__right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__data {
+    color: #c8c8c8;
+    font-size: 14px;
+  }
+
+  &__inner {
+    overflow: hidden;
+    margin-left: 20px;
+  }
+
+  &__child-elements {
+    transition: max-height 1.5s ease;
+    height: auto;
+    max-height: 1000px;
+  }
+
+  .close {
+    transition: max-height .1s ease-out;
+    max-height: 0;
+  }
+}
