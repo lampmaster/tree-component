@@ -77,29 +77,6 @@
             "name": "pacman.com",
             "type": "file"
         }]
-    },{
-        "name": "Images",
-        "type": "folder",
-        "children": [{
-          "name": "Family",
-          "type": "folder",
-          "children": [{
-            "name": "file1.jpg",
-            "type": "file"
-          }, {
-            "name": "file2.jpg",
-            "type": "file"
-          }, {
-            "name": "file3.jpg",
-            "type": "file"
-          }]
-        }, {
-          "name": "foto21345.jpg",
-          "type": "file"
-        }, {
-          "name": "foto2908776t.jpg",
-          "type": "file"
-        }]
-      }
+    }
     ]
 }

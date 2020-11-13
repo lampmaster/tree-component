@@ -1,5 +1,5 @@
 export function compare(a: string, b: string): number {
-  const containNumber = [a, b].every(el => {
+  const containNumber: boolean = [a, b].every(el => {
     return el.match(/(\d+)/g) !== null;
   });
 

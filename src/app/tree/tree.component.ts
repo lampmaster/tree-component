@@ -56,11 +56,14 @@ export class TreeComponent implements OnChanges {
   public setType(data: ParsedDataInterface): string {
     const types = {
       file: 'insert_drive_file',
-      folder: ['folder', 'folder_open']
+      folder: {
+        close: 'folder',
+        open: 'folder_open'
+      }
     };
 
     if (data.type === 'folder') {
-      return data.isOpen ? types.folder[1] : types.folder[0];
+      return data.isOpen ? types.folder.open : types.folder.close;
     }
 
     return types[data.type];
